@@ -38,3 +38,8 @@ Desktop.ini
 
 # Logs
 *.log
+
+#csv
+data.csv
+*.csv
+
