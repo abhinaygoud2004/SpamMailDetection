@@ -40,6 +40,6 @@ Desktop.ini
 *.log
 
 #csv
-data.csv
+spam.csv
 *.csv
 
