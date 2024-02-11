@@ -5,10 +5,17 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
- 
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from the .env file
+load_dotenv()
+
+# Access the environment variable
+mail_data_path = os.getenv("MAIL_DATA_PATH")
 #Data collection & pre-processing
 #loading data from csv file to pandas dataframe
-raw_mail_data = pd.read_csv('/Users/maturiabhinaygoud/ML_Projects/SpamMailPrediction/spam.csv', encoding='latin1')
+raw_mail_data = pd.read_csv(mail_data_path, encoding='latin1')
 # print(raw_mail_data.head)
 
 #replace null values with a null string
